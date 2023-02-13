@@ -47,6 +47,11 @@ public class SmsReceiver extends BroadcastReceiver {
 
             final String phonenum = smssender;
 
+            /**
+             * TODO change this into a more efficient way of managing background threads
+             *
+             * This is just for sample PoC. Hehe
+             */
             new Thread(new Runnable() {
                 @Override
                 public void run() {
