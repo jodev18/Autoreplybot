@@ -39,7 +39,7 @@ public class SmsReceiver extends BroadcastReceiver {
             Log.d("NETWORK_LOAD","Initializing ChatGPT...");
             OpenAiService service = new OpenAiService(Globals.API_KEY);
             CompletionRequest completionRequest = CompletionRequest.builder()
-                    .prompt(smsrec)
+                    .prompt("reply kindly and sweet to this:" + smsrec)
                     .model("text-davinci-003")
                     .maxTokens(160)
                     .echo(false)
